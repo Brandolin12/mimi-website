@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Razones por las que Amo a Mimi</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap');
+        
+        :root {
+            --primary: #ff6b8b;
+            --secondary: #ff8e9e;
+            --light: #fff5f7;
+            --dark: #333;
+            --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 0;
+            position: relative;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+        
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 2;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            position: relative;
+            z-index: 2;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .heart-bg {
+            position: absolute;
+            font-size: 30px;
+            color: rgba(255, 255, 255, 0.15);
+            animation: float 6s ease-in-out infinite;
+            z-index: 1;
+        }
+        
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+        
+        .gallery-item {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .photo-caption {
+            padding: 15px;
+            background: white;
+        }
+        
+        .photo-caption h3 {
+            color: var(--primary);
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+        
+        .photo-caption p {
+            font-size: 0.9rem;
+            color: #555;
+        }
+        
+        .heart {
+            position: absolute;
+            font-size: 24px;
+            color: var(--primary);
+            animation: pulse 1.5s infinite;
+            z-index: 3;
+        }
+        
+        .reasons-section {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 40px 0;
+            box-shadow: var(--shadow);
+        }
+        
+        .reasons-section h2 {
+            text-align: center;
+            color: var(--primary);
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+        
+        .reasons-list {
+            columns: 2;
+            column-gap: 30px;
+        }
+        
+        .reasons-list li {
+            margin-bottom: 15px;
+            list-style-type: none;
+            position: relative;
+            padding-left: 30px;
+            break-inside: avoid;
+        }
+        
+        .reasons-list li:before {
+            content: '❤';
+            color: var(--primary);
+            position: absolute;
+            left: 0;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            margin-top: 40px;
+        }
+        
+        footer p {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+        
+        .signature {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.8rem;
+            margin-top: 20px;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.3); opacity: 0.7; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .gallery-container {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                gap: 15px;
+            }
+            
+            .reasons-list {
+                columns: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <!-- Corazones flotantes de fondo -->
+            <div class="heart-bg" style="top: 10%; left: 5%;">❤</div>
+            <div class="heart-bg" style="top: 20%; right: 8%; animation-delay: 1s;">❤</div>
+            <div class="heart-bg" style="top: 50%; left: 3%; animation-delay: 2s;">❤</div>
+            <div class="heart-bg" style="bottom: 30%; right: 5%; animation-delay: 3s;">❤</div>
+            <div class="heart-bg" style="bottom: 10%; left: 10%; animation-delay: 4s;">❤</div>
+            
+            <h1>Razones por las que Amo a Mimi</h1>
+            <p class="subtitle">Cada día descubro nuevos motivos para amarte más, pero aquí están algunos de los más especiales</p>
+        </header>
+        
+        <div class="gallery-container">
+            <!-- Foto 1 -->
+            <div class="gallery-item">
+                <div class="heart" style="top: 15px; right: 15px;">❤</div>
+                <img src="images/WhatsApp Image 2025-06-29 at 9.15.12 PM.jpeg" alt="Mimi sonriendo">
+                <div class="photo-caption">
+                    <h3>Tu sonrisa</h3>
+                    <p>Ilumina mis días más oscuros con solo aparecer</p>
+                </div>
+            </div>
+            
+            <!-- Foto 2 -->
+            <div class="gallery-item">
+                <div class="heart" style="top: 15px; left: 15px;">❤</div>
+                <img src="images/WhatsApp Image 2025-06-29 at 9.15.12 PM (1).jpeg" alt="Mimi tierna">
+                <div class="photo-caption">
+                    <h3>Tu ternura</h3>
+                    <p>Eres la persona más dulce que he conocido</p>
+                </div>
+            </div>
+            
+            <!-- Foto 3 -->
+            <div class="gallery-item">
+                <div class="heart" style="bottom: 60px; right: 15px;">❤</div>
+                <img src="images/WhatsApp Image 2025-06-29 at 9.15.15 PM.jpeg" alt="Mimi natural">
+                <div class="photo-caption">
+                    <h3>Tu naturalidad</h3>
+                    <p>No necesitas fingir nada para ser perfecta</p>
+                </div>
+            </div>
+            
+            <!-- Foto 4 -->
+            <div class="gallery-item">
+                <div class="heart" style="bottom: 60px; left: 15px;">❤</div>
+                <img src="images/WhatsApp Image 2025-06-29 at 9.15.15 PM (1).jpeg" alt="Mimi feliz">
+                <div class="photo-caption">
+                    <h3>Tu alegría</h3>
+                    <p>Contagias felicidad a todos a tu alrededor</p>
+                </div>
+            </div>
+            
+            <!-- Foto 5 -->
+            <div class="gallery-item">
+                <div class="heart" style="top: 50%; left: 50%;">❤</div>
+                <img src="images/WhatsApp Image 2025-06-29 at 9.15.17 PM.jpeg" alt="Mimi pensativa">
+                <div class="photo-caption">
+                    <h3>Tu mente</h3>
+                    <p>Amo cómo piensas y cómo ves el mundo</p>
+                </div>
+            </div>
+            
+            <!-- Foto 6 -->
+            <div class="gallery-item">
+                <div class="heart" style="top: 20px; right: 20px;">❤</div>
+                <img src="images/WhatsApp Image 2025-06-29 at 9.15.17 PM (1).jpeg" alt="Mimi juguetona">
+                <div class="photo-caption">
+                    <h3>Tu espíritu juguetón</h3>
+                    <p>Nunca dejas que la vida se vuelva aburrida</p>
+                </div>
+            </div>
+            
+            <!-- Foto 7 -->
+            <div class="gallery-item">
+                <div class="heart" style="bottom: 30px; left: 30px;">❤</div>
+                <img src="images/WhatsApp Image 2025-06-29 at 9.15.17 PM (2).jpeg" alt="Mimi de cerca">
+                <div class="photo-caption">
+                    <h3>Tus detalles</h3>
+                    <p>Cada pequeño gesto tuyo me enamora más</p>
+                </div>
+            </div>
+            
+            <!-- Foto 8 -->
+            <div class="gallery-item">
+                <div class="heart" style="top: 30%; right: 30%;">❤</div>
+                <img src="images/WhatsApp Image 2025-06-29 at 9.15.17 PM (3).jpeg" alt="Mimi natural">
+                <div class="photo-caption">
+                    <h3>Tu autenticidad</h3>
+                    <p>Eres siempre tú misma, sin pretensiones</p>
+                </div>
+            </div>
+            
+            <!-- Foto 9 -->
+            <div class="gallery-item">
+                <div class="heart" style="top: 15px; left: 15px;">❤</div>
+                <img src="images/WhatsApp Image 2025-06-29 at 9.15.18 PM.jpeg" alt="Mimi seria">
+                <div class="photo-caption">
+                    <h3>Tu seriedad</h3>
+                    <p>Hasta cuando estás seria eres adorable</p>
+                </div>
+            </div>
+            
+            <!-- Foto 10 -->
+            <div class="gallery-item">
+                <div class="heart" style="bottom: 15px; right: 15px;">❤</div>
+                <img src="images/WhatsApp Image 2025-06-29 at 9.15.18 PM (1).jpeg" alt="Mimi divertida">
+                <div class="photo-caption">
+                    <h3>Tu sentido del humor</h3>
+                    <p>Nadie me hace reír como tú lo haces</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="reasons-section">
+            <h2>100 Razones por las que Amo a Mimi</h2>
+            <ul class="reasons-list">
+                <li>Por tu sonrisa que ilumina mi vida</li>
+                <li>Por la forma en que me miras</li>
+                <li>Por tu risa contagiosa</li>
+                <li>Por tu corazón generoso</li>
+                <li>Por cómo me haces sentir especial</li>
+                <li>Por tus locuras que me sacan de la rutina</li>
+                <li>Por tu inteligencia y sabiduría</li>
+                <li>Por tu capacidad para escucharme</li>
+                <li>Por tu paciencia con mis defectos</li>
+                <li>Por tu forma de entender mis silencios</li>
+                <li>Por cómo me abrazas cuando más lo necesito</li>
+                <li>Por tu voz que me tranquiliza</li>
+                <li>Por tu manera única de ver la vida</li>
+                <li>Por tus sueños y aspiraciones</li>
+                <li>Por tu valentía frente a las adversidades</li>
+                <li>Por tu ternura con los animales</li>
+                <li>Por tu pasión por las cosas que te gustan</li>
+                <li>Por tu honestidad siempre</li>
+                <li>Por tu lealtad inquebrantable</li>
+                <li>Por tu capacidad de sorprenderme cada día</li>
+                <li>Por tu estilo único y personal</li>
+                <li>Por cómo me cuidas cuando estoy enfermo</li>
+                <li>Por tus consejos sabios</li>
+                <li>Por tu apoyo incondicional</li>
+                <li>Por tu forma de hacerme mejor persona</li>
+                <li>Por tu creatividad e imaginación</li>
+                <li>Por tu amor por la familia</li>
+                <li>Por tu dedicación en todo lo que haces</li>
+                <li>Por tu capacidad de perdonar</li>
+                <li>Por tu optimismo que me contagia</li>
+                <li>Por tu fuerza interior</li>
+                <li>Por tu sensibilidad ante el arte</li>
+                <li>Por tu amor por la naturaleza</li>
+                <li>Por cómo me haces sentir amado</li>
+                <li>Por tu compañía en los momentos simples</li>
+                <li>Por tu valentía para ser auténtica</li>
+                <li>Por tu capacidad de alegrarte por los demás</li>
+                <li>Por tu humildad a pesar de tus virtudes</li>
+                <li>Por tu sonrisa cuando me ves</li>
+                <li>Por cómo me haces sentir en casa dondequiera que estemos</li>
+                <li>Por tu forma de amar sin condiciones</li>
+                <li>Por ser mi refugio seguro</li>
+                <li>Por hacer que cada día sea especial</li>
+                <li>Por tu capacidad de sorprenderme</li>
+                <li>Por tu energía positiva</li>
+                <li>Por tu compromiso con nuestra relación</li>
+                <li>Por tu manera de entender mis locuras</li>
+                <li>Por ser mi mejor amiga y mi amor</li>
+                <li>Por completarme de maneras que no sabía que necesitaba</li>
+                <li>Por ser exactamente como eres</li>
+            </ul>
+        </div>
+        
+        <footer>
+            <p>Mimi, estas son solo algunas de las infinitas razones por las que te amo</p>
+            <p>Cada día a tu lado es un regalo que atesoro con todo mi corazón</p>
+            <p>Prometo amarte y cuidarte todos los días de mi vida</p>
+            <div class="signature">Para siempre tuyo</div>
+        </footer>
+    </div>
+</body>
+</html>
